@@ -2,7 +2,7 @@ import 'package:favouriteplaces/models/place_model.dart';
 import 'package:favouriteplaces/providers/user_places.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
+import 'package:favouriteplaces/widgets/image_input.dart';
 class AddFavouriteScreenWidget extends ConsumerStatefulWidget {
   const AddFavouriteScreenWidget({super.key,});
 
@@ -37,6 +37,8 @@ class _AddFavouriteScreenWidgetState extends ConsumerState<AddFavouriteScreenWid
               decoration: InputDecoration(label: Text('Title')),
               style: TextStyle(color: Colors.white),
             ),
+            SizedBox(height: 16),
+            ImageInput(),
             SizedBox(height: 16),
             ElevatedButton.icon(
               onPressed: _savePlace,
